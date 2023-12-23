@@ -1,0 +1,10 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <div class="container">
+        <h1>This is about page</h1>
+        <p>Hello there!!! huh!</p>
+
+        <p>This came from the template: {{index .StringMap "test"}}</p>
+    </div>
+{{end}}
