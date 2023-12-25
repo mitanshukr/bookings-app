@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/mitanshukr/bookings-app/pkg/config"
-	"github.com/mitanshukr/bookings-app/pkg/handlers"
-	"github.com/mitanshukr/bookings-app/pkg/render"
+	"github.com/mitanshukr/bookings-app/internal/config"
+	"github.com/mitanshukr/bookings-app/internal/handlers"
+	"github.com/mitanshukr/bookings-app/internal/render"
 )
 
 const portNumber = ":8080"
@@ -21,7 +21,7 @@ func main() {
 	}
 
 	appConfig.TemplateCache = tc
-	appConfig.IsDev = false
+	appConfig.IsDev = true
 
 	render.NewTemplate(&appConfig)
 
